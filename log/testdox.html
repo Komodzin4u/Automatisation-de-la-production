@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2rem;
+                background-color: #fff;
+                color: #000;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: larger;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4e9a06;
+                content: '✓';
+                padding-right: 0.5rem;
+            }
+
+            .defect {
+                color: #a40000;
+            }
+
+            .defect:before {
+                color: #a40000;
+                content: '✗';
+                padding-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Configuration</h2>
+        <ul>
+            <li class="success">Default config file</li>
+            <li class="success">Handle fresh config file</li>
+            <li class="success">Handle missing config file</li>
+            <li class="success">Handle blank config file</li>
+            <li class="success">Handle minimal config file</li>
+            <li class="success">Handle invalid section</li>
+            <li class="success">Handle invalid key</li>
+            <li class="success">Handle get key</li>
+            <li class="success">Handle wrong types</li>
+            <li class="success">Handle missing sub keys</li>
+            <li class="success">Handle pre rename config</li>
+            <li class="success">Config path</li>
+        </ul>
+        <h2>Controller</h2>
+        <ul>
+            <li class="success">View</li>
+            <li class="success">View language selection</li>
+            <li class="success">View force language default</li>
+            <li class="success">View url shortener</li>
+            <li class="success">Conf</li>
+            <li class="success">Create</li>
+            <li class="success">Create invalid timelimit</li>
+            <li class="success">Create invalid size</li>
+            <li class="success">Create proxy header</li>
+            <li class="success">Create duplicate id</li>
+            <li class="success">Create valid expire</li>
+            <li class="success">Create valid expire with discussion</li>
+            <li class="success">Create invalid expire</li>
+            <li class="success">Create invalid burn</li>
+            <li class="success">Create invalid open discussion</li>
+            <li class="success">Create broken upload</li>
+            <li class="success">Create too soon</li>
+            <li class="success">Create invalid format</li>
+            <li class="success">Create comment</li>
+            <li class="success">Create invalid comment</li>
+            <li class="success">Create comment discussion disabled</li>
+            <li class="success">Create comment invalid paste</li>
+            <li class="success">Create duplicate comment</li>
+            <li class="success">Read invalid id</li>
+            <li class="success">Read nonexisting</li>
+            <li class="success">Read expired</li>
+            <li class="success">Read burn</li>
+            <li class="success">Read json</li>
+            <li class="success">Read old syntax</li>
+            <li class="success">Read burn after reading</li>
+            <li class="success">Delete</li>
+            <li class="success">Delete invalid id</li>
+            <li class="success">Delete inexistant id</li>
+            <li class="success">Delete invalid token</li>
+            <li class="success">Delete invalid burn after reading</li>
+            <li class="success">Delete expired</li>
+            <li class="success">Delete missing per paste salt</li>
+        </ul>
+        <h2>Controller With Db</h2>
+        <ul>
+            <li class="success">View</li>
+            <li class="success">View language selection</li>
+            <li class="success">View force language default</li>
+            <li class="success">View url shortener</li>
+            <li class="success">Conf</li>
+            <li class="success">Create</li>
+            <li class="success">Create invalid timelimit</li>
+            <li class="success">Create invalid size</li>
+            <li class="success">Create proxy header</li>
+            <li class="success">Create duplicate id</li>
+            <li class="success">Create valid expire</li>
+            <li class="success">Create valid expire with discussion</li>
+            <li class="success">Create invalid expire</li>
+            <li class="success">Create invalid burn</li>
+            <li class="success">Create invalid open discussion</li>
+            <li class="success">Create broken upload</li>
+            <li class="success">Create too soon</li>
+            <li class="success">Create invalid format</li>
+            <li class="success">Create comment</li>
+            <li class="success">Create invalid comment</li>
+            <li class="success">Create comment discussion disabled</li>
+            <li class="success">Create comment invalid paste</li>
+            <li class="success">Create duplicate comment</li>
+            <li class="success">Read invalid id</li>
+            <li class="success">Read nonexisting</li>
+            <li class="success">Read expired</li>
+            <li class="success">Read burn</li>
+            <li class="success">Read json</li>
+            <li class="success">Read old syntax</li>
+            <li class="success">Read burn after reading</li>
+            <li class="success">Delete</li>
+            <li class="success">Delete invalid id</li>
+            <li class="success">Delete inexistant id</li>
+            <li class="success">Delete invalid token</li>
+            <li class="success">Delete invalid burn after reading</li>
+            <li class="success">Delete expired</li>
+            <li class="success">Delete missing per paste salt</li>
+        </ul>
+        <h2>Controller With Gcs</h2>
+        <ul>
+            <li class="success">View</li>
+            <li class="success">View language selection</li>
+            <li class="success">View force language default</li>
+            <li class="success">View url shortener</li>
+            <li class="success">Conf</li>
+            <li class="success">Create</li>
+            <li class="success">Create invalid timelimit</li>
+            <li class="success">Create invalid size</li>
+            <li class="success">Create proxy header</li>
+            <li class="success">Create duplicate id</li>
+            <li class="success">Create valid expire</li>
+            <li class="success">Create valid expire with discussion</li>
+            <li class="success">Create invalid expire</li>
+            <li class="success">Create invalid burn</li>
+            <li class="success">Create invalid open discussion</li>
+            <li class="success">Create broken upload</li>
+            <li class="success">Create too soon</li>
+            <li class="success">Create invalid format</li>
+            <li class="success">Create comment</li>
+            <li class="success">Create invalid comment</li>
+            <li class="success">Create comment discussion disabled</li>
+            <li class="success">Create comment invalid paste</li>
+            <li class="success">Create duplicate comment</li>
+            <li class="success">Read invalid id</li>
+            <li class="success">Read nonexisting</li>
+            <li class="success">Read expired</li>
+            <li class="success">Read burn</li>
+            <li class="success">Read json</li>
+            <li class="success">Read old syntax</li>
+            <li class="success">Read burn after reading</li>
+            <li class="success">Delete</li>
+            <li class="success">Delete invalid id</li>
+            <li class="success">Delete inexistant id</li>
+            <li class="success">Delete invalid token</li>
+            <li class="success">Delete invalid burn after reading</li>
+            <li class="success">Delete expired</li>
+            <li class="success">Delete missing per paste salt</li>
+        </ul>
+        <h2>Database</h2>
+        <ul>
+            <li class="success">Salt migration</li>
+            <li class="success">Database based data store works</li>
+            <li class="success">Database based attachment store works</li>
+            <li class="success">Purge</li>
+            <li class="success">Get ibm instance</li>
+            <li class="success">Get informix instance</li>
+            <li class="success">Get mssql instance</li>
+            <li class="success">Get mysql instance</li>
+            <li class="success">Get oci instance</li>
+            <li class="success">Get pgsql instance</li>
+            <li class="success">Get foo instance</li>
+            <li class="success">Missing dsn</li>
+            <li class="success">Missing usr</li>
+            <li class="success">Missing pwd</li>
+            <li class="success">Missing opt</li>
+            <li class="success">Old attachments</li>
+            <li class="success">Corrupt meta</li>
+            <li class="success">Table upgrade</li>
+            <li class="success">Oci clob</li>
+        </ul>
+        <h2>Filesystem</h2>
+        <ul>
+            <li class="success">File based data store works</li>
+            <li class="success">File based attachment store works</li>
+            <li class="success">Purge</li>
+            <li class="success">Error detection</li>
+            <li class="success">Comment error detection</li>
+            <li class="success">Old files get converted</li>
+        </ul>
+        <h2>Google Cloud Storage</h2>
+        <ul>
+            <li class="success">File based data store works</li>
+            <li class="success">Purge</li>
+            <li class="success">Error detection</li>
+            <li class="success">Comment error detection</li>
+            <li class="success">Key value store</li>
+            <li class="success">Key value purge traffic limiter</li>
+        </ul>
+        <h2>Filter</h2>
+        <ul>
+            <li class="success">Filter makes times humanly readable</li>
+            <li class="success">Filter fail times humanly readable</li>
+            <li class="success">Filter makes sizes humanly readable</li>
+        </ul>
+        <h2>Format V2</h2>
+        <ul>
+            <li class="success">Format v 2 validator validates correctly</li>
+        </ul>
+        <h2>I18n</h2>
+        <ul>
+            <li class="success">Translation fallback</li>
+            <li class="success">Cookie language de detection</li>
+            <li class="success">Browser language de detection</li>
+            <li class="success">Browser language fr detection</li>
+            <li class="success">Browser language no detection</li>
+            <li class="success">Browser language oc detection</li>
+            <li class="success">Browser language zh detection</li>
+            <li class="success">Browser language pl detection</li>
+            <li class="success">Browser language ru detection</li>
+            <li class="success">Browser language sl detection</li>
+            <li class="success">Browser language cs detection</li>
+            <li class="success">Browser language any detection</li>
+            <li class="success">Variable injection</li>
+            <li class="success">Html entity encoding</li>
+            <li class="success">Message ids exist in all languages</li>
+        </ul>
+        <h2>Json Api</h2>
+        <ul>
+            <li class="success">Create</li>
+            <li class="success">Put</li>
+            <li class="success">Delete</li>
+            <li class="success">Delete with post</li>
+            <li class="success">Read</li>
+            <li class="success">Json ld paste</li>
+            <li class="success">Json ld comment</li>
+            <li class="success">Json ld paste meta</li>
+            <li class="success">Json ld comment meta</li>
+            <li class="success">Json ld invalid</li>
+            <li class="success">Shorten via yourls</li>
+            <li class="success">Shorten via yourls failure</li>
+        </ul>
+        <h2>Migrate</h2>
+        <ul>
+            <li class="success">Migrate</li>
+        </ul>
+        <h2>Model</h2>
+        <ul>
+            <li class="success">Basic workflow</li>
+            <li class="success">Paste v 1</li>
+            <li class="success">Comment defaults</li>
+            <li class="success">Paste duplicate</li>
+            <li class="success">Store fail</li>
+            <li class="success">Comment store fail</li>
+            <li class="success">Comment duplicate</li>
+            <li class="success">Implicit defaults</li>
+            <li class="success">Paste id validation</li>
+            <li class="success">Invalid paste</li>
+            <li class="success">Invalid paste format</li>
+            <li class="success">Invalid paste id</li>
+            <li class="success">Invalid comment</li>
+            <li class="success">Invalid comment deleted paste</li>
+            <li class="success">Invalid comment data</li>
+            <li class="success">Invalid comment parent</li>
+            <li class="success">Expiration</li>
+            <li class="success">Comment deletion</li>
+            <li class="success">Purge</li>
+            <li class="success">Comment with disabled vizhash</li>
+            <li class="success">Comment vizhash</li>
+        </ul>
+        <h2>Purge Limiter</h2>
+        <ul>
+            <li class="success">Limit</li>
+        </ul>
+        <h2>Server Salt</h2>
+        <ul>
+            <li class="success">Generation</li>
+            <li class="success">Path shenanigans</li>
+            <li class="success">File read</li>
+            <li class="success">File write</li>
+            <li class="success">Permission shenanigans</li>
+        </ul>
+        <h2>Traffic Limiter</h2>
+        <ul>
+            <li class="success">Htaccess</li>
+            <li class="success">Traffic gets limited</li>
+            <li class="success">Traffic limit exempted</li>
+            <li class="success">Traffic limit creators</li>
+        </ul>
+        <h2>Request</h2>
+        <ul>
+            <li class="success">View</li>
+            <li class="success">Read</li>
+            <li class="success">Delete</li>
+            <li class="success">Api create</li>
+            <li class="success">Api create alternative</li>
+            <li class="success">Api read</li>
+            <li class="success">Api delete</li>
+            <li class="success">Post garbage</li>
+            <li class="success">Read with negotiation</li>
+            <li class="success">Read with xhtml negotiation</li>
+            <li class="success">Api read with negotiation</li>
+            <li class="success">Read with failed negotiation</li>
+            <li class="success">Paste id extraction</li>
+        </ul>
+        <h2>View</h2>
+        <ul>
+            <li class="success">Template renders correctly</li>
+            <li class="success">Missing template</li>
+        </ul>
+        <h2>Vizhash16x16</h2>
+        <ul>
+            <li class="success">Vizhash generates unique pngs per ip</li>
+        </ul>
+        <h2>Yourls Proxy</h2>
+        <ul>
+            <li class="success">Yourls proxy</li>
+            <li class="success">Foreign url</li>
+            <li class="success">Yourls error</li>
+            <li class="success">Server error</li>
+        </ul>
+    </body>
+</html>
