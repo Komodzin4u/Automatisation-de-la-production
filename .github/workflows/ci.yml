@@ -18,7 +18,7 @@ jobs:
       with:
         php-version: '8.1' 
         extensions: mbstring, dom, curl, gd, sqlite3
-        coverage: none
+        coverage: xdebug
 
     - name: Install Composer dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
@@ -49,7 +49,7 @@ jobs:
     - name: Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
-        filename: coverage/**/coverage.cobertura.xml
+        filename: coverage.xml
         badge: true
         fail_below_min: true
         format: markdown
