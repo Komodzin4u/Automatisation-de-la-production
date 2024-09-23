@@ -42,5 +42,5 @@ jobs:
         hide_branch_rate: false
         hide_complexity: true
         indicators: true
-        output: code-coverage-results.md
+        output: both
         thresholds: '60 80'
