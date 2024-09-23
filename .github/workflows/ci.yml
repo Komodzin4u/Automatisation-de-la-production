@@ -47,5 +47,4 @@ jobs:
 
     - name: Display Code Coverage Results
       run: |
-        echo "### Code Coverage Results" >> $GITHUB_ENV
-        cat coverage.xml >> $GITHUB_ENV
+        cat code-coverage-results.md
