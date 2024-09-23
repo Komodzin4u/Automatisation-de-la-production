@@ -44,3 +44,8 @@ jobs:
         indicators: true
         output: file
         thresholds: '60 80'
+
+    - name: Display Code Coverage Results
+      run: |
+        echo "### Code Coverage Results" >> $GITHUB_ENV
+        cat coverage.xml >> $GITHUB_ENV
