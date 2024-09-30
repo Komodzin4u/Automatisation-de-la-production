@@ -55,7 +55,7 @@ jobs:
       continue-on-error: true
 
     - name: Run PHPMD
-      run: ./vendor/bin/phpmd ./lib ansi codesize,unusedcode, naming
+      run: ./vendor/bin/phpmd ./lib ansi phpmd.xml
       continue-on-error: true
 
     - name: Run PHPStan
