@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ruleset name="PHPMD">
+    <description>fichier de conf</description>
+
+    <!-- Ici on inclut les différentes règles qu'on souhaite appliquer -->
+    <rule ref="rulesets/cleancode.xml"/>
+    <rule ref="rulesets/codesize.xml"/>
+    <rule ref="rulesets/naming.xml"/>
+    <rule ref="rulesets/unusedcode.xml"/>
+</ruleset>

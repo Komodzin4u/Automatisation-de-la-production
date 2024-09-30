@@ -1,0 +1,12 @@
+parameters:
+    level: max  # On peut changer le niveau ici, de 0 à max (max = niveau 9)
+    paths:
+        - ./lib/  # Chemin vers le répertoire à analyser
+
+    # Optionnel : Ignorer des erreurs spécifiques
+    # ignoreErrors:
+    #    - '#des erreurs à ignorer#'
+
+    # Optionnel : Définir des extensions spécifiques si nécessaires
+    # includes:
+    #     - ./vendor/some-package/some-extension.neon
