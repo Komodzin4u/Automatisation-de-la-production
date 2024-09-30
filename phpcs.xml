@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="PHPCS">
+    <description>fichier de conf</description>
+
+    <!-- Ici on spécifie la norme à utiliser, par exemple PSR-12, PSR-1, PSR-2 -->
+    <rule ref="PSR12"/>
+
+    <arg name="extensions" value="php"/>
+
+    <file>./lib/</file>
+</ruleset>
