@@ -45,6 +45,7 @@ jobs:
         output: file
         thresholds: '60 80'
 
-    - name: Display Code Coverage Results
+    - name: Display coverage results
       run: |
-        cat code-coverage-results.md
+        echo "## Code Coverage Results" >> $GITHUB_STEP_SUMMARY
+        cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
