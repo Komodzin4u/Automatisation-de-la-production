@@ -71,9 +71,8 @@ jobs:
       - name: Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.3.1
         with:
-          ftp-server: group7.bleumatin.fr
-          ftp-username: group7
-          ftp-password: ${{ secrets.credentials }} 
-          local-dir: ./
+          server: group7.bleumatin.fr
+          username: group7
+          password: ${{ secrets.credentials }} 
           exclude: |
             vendor/
