@@ -72,7 +72,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.1
         with:
           server: group7.bleumatin.fr
-          username: group7
+          username: group7@188.165.230.7
           password: ${{ secrets.credentials }} 
           exclude: |
             vendor/
