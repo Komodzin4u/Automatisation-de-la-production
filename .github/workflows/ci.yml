@@ -74,7 +74,7 @@ jobs:
           server: 188.165.230.7
           username: group7
           password: ${{ secrets.credentials }} 
-          server-dir: ./
+          server-dir: www/
           exclude: |
            **/.git*
             **/.git*/**
