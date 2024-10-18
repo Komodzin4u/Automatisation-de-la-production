@@ -79,13 +79,14 @@ Dans ce TD, plusieurs tâches ont été réalisées afin d'obtenir le ci.yml dé
 ### Intégration du code coverage dans GitHub Actions
 Nous avons intégré la génération de couverture de code, ainsi que la publication du rapport en format Cobertura. Voici les ajouts effectués dans le workflow :
 
-On utilise le format Cobertura pour la couverture de code.
+Premièrement, nous avons configuré PHPUnit pour générer un rapport de couverture au format Cobertura :
 ```
 - name: Run PHPUnit tests with Cobertura coverage
   run: ./vendor/bin/phpunit --coverage-cobertura=coverage.xml
 ```
+Le format Cobertura est un format standardisé pour la couverture de code, largement utilisé dans les pipelines CI.
 
-Le rapport est ensuite uploadé comme un artefact GitHub pour une consultation ultérieure :
+Ensuite, le rapport généré est téléchargé comme artefact dans GitHub, permettant ainsi de le consulter ultérieurement si nécessaire :
 ```
 - name: Upload Cobertura Coverage Report
   uses: actions/upload-artifact@v3
@@ -94,7 +95,7 @@ Le rapport est ensuite uploadé comme un artefact GitHub pour une consultation u
     path: coverage.xml
 ```
 
-L'action irongut/CodeCoverageSummary a été utilisée pour ajouter un résumé de la couverture directement dans les commentaires du workflow sur GitHub. Cette action permet de générer un badge qui indique visuellement le pourcentage de couverture, et de définir des seuils minimaux de couverture.
+Pour rendre la couverture de code plus accessible et visuelle, nous avons utilisé l'action irongut/CodeCoverageSummary. Cette action permet de générer un résumé de la couverture directement dans les résultats du workflow, accompagné d'un badge indiquant le pourcentage de couverture qui offre une vue rapide et claire sur la qualité des tests.
 ```
 - name: Code Coverage Report Summary
   uses: irongut/CodeCoverageSummary@v1.3.0
@@ -109,6 +110,7 @@ L'action irongut/CodeCoverageSummary a été utilisée pour ajouter un résumé 
     output: file
     thresholds: '60 80'
 ```
+Nous avons également défini des seuils de couverture (60% et 80%) qui permet d'être alertés en cas de couverture insuffisante, garantissant ainsi que le projet reste dans des standards de qualité acceptables.
 
 Enfin, nous affichons les résultats dans le résumé du job GitHub Action :
 ```
