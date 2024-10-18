@@ -1,4 +1,7 @@
 # Automatisation-de-la-production
+Binome : 
+- Komodzinski Jawad
+- Holcvart Lothaire
 
 ## TD Tests
 ### Introduction
