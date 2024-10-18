@@ -1,12 +1,13 @@
 # Automatisation-de-la-production
 
 ## TD Tests
+### Introduction
+L'intégration continue (CI) est une pratique de développement logiciel où le code est régulièrement testé et intégré dans un référentiel partagé, afin de détecter les erreurs plus tôt dans le cycle de développement. Ce TD a pour objectif de mettre en place un pipeline CI en utilisant GitHub Actions, pour exécuter automatiquement les tests unitaires via PHPUnit à chaque changement apporté à la branche principale (main).
 
-L'objectif de ce TD est d'utiliser une action GitHub pour lancer les tests unitaires du projet dans un workflow CI.
-
-Le workflow est conçu pour exécuter des tests PHPUnit chaque fois qu'il y a un nouveau push sur la branche main.
 Il installe le code source, configure l'environnement PHP, installe les dépendances nécessaires, puis exécute les tests pour s'assurer que le code fonctionne correctement.
 L'objectif est d'avoir une intégration continue afin de détecter les erreurs de code rapidement après chaque modification.
+
+### Explication du code
 ```
 name: CI - PHPUnit Tests
 
@@ -58,3 +59,8 @@ Cette étape exécute la commande composer install pour installer les dépendanc
       run: ./vendor/bin/phpunit
 ```
 Cette étape exécute les tests unitaires en utilisant PHPUnit. La commande ./vendor/bin/phpunit lance PHPUnit installé via Composer, qui exécute tous les tests définis dans le projet.
+
+### Conclusion
+En résumé, ce workflow GitHub Actions permet d'automatiser les tests unitaires à chaque modification du code sur la branche principale, garantissant ainsi que les erreurs de code sont détectées rapidement. Cela améliore considérablement la qualité du projet et permet aux développeurs de travailler en toute confiance, en sachant que le code est testé automatiquement.
+
+
