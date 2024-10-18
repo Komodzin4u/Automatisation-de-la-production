@@ -167,9 +167,9 @@ L'intégration de ces outils d'analyse statique dans notre workflow CI permet de
 L'objectif de ce TD est d'automatiser le déploiement du site web sur un serveur FTP en utilisant GitHub Actions. Le déploiement FTP permet de transférer automatiquement les fichiers du projet vers un serveur de production à chaque mise à jour de la branche principale. Cela permet d'éviter les manipulations manuelles et garantit une mise à jour rapide du site après chaque modification.
 
 ### Créations des secrets GitHub
-Avant de configurer le déploiement FTP, j'ai dû récupérer mon login et mot de passe pour le serveur FTP, ainsi que l'URL du serveur. Ces informations sont sensibles et doivent donc être stockées de manière sécurisée dans GitHub sous forme de secrets. Cela permet d'éviter de les exposer publiquement dans les fichiers du projet.
+Avant de configurer le déploiement FTP, on a récupérer notre login et mot de passe pour le serveur FTP, ainsi que l'URL du serveur. Ces informations sont sensibles et doivent donc être stockées de manière sécurisée dans GitHub sous forme de secrets. Cela permet d'éviter de les exposer publiquement dans les fichiers du projet.
 
-J'ai ajouté trois secrets dans les paramètres du dépôt GitHub :
+Nous avons ajouté trois secrets dans les paramètres du dépôt GitHub :
 - SERVER : l'URL du serveur FTP
 - ID : le nom d'utilisateur pour le serveur FTP
 - CREDENTIALS : le mot de passe associé
